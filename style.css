@@ -1157,7 +1157,7 @@ body {
   position: absolute;
   align-self: flex-end;
   border-radius: 16px;
-  background: #ff3e79 url(/src/img/svg/dropdown.svg) no-repeat 90% 50%;
+  background: #ff3e79 url(./static/dropdown.svg) no-repeat 90% 50%;
   border: none;
   display: flex;
   width: 100px;
@@ -1544,7 +1544,7 @@ body {
   margin-top: 20px;
   position: relative;
   font-family: 'TT Lakes';
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
   letter-spacing: 0.2px;
   color: #1b1c21; }
@@ -1692,6 +1692,8 @@ body {
     background-color: #ffffff; } }
 
 @media screen and (min-width: 1440px) {
+  .button__price {
+    align-self: auto; }
   .close {
     position: relative;
     display: inline;
