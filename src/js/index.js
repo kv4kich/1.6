@@ -1,3 +1,5 @@
 import '../scss/style.scss'
-
-console.log('Works!')
+import '../js/show-more.js'
+import '../js/slider'
+import '../../node_modules/swiper/swiper-bundle.js'
+import '../js/modals.js'
