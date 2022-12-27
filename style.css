@@ -1342,10 +1342,8 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  transform: translate(0, 0);
   z-index: 30;
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: all 0.8s ease 0s; }
+  background-color: rgba(255, 255, 255, 0.5); }
 
 .overlay {
   /* Скрываем подложку  */
@@ -1360,7 +1358,18 @@ body {
   z-index: 20;
   transition: 0.3s all; }
 
-.modal.active,
+.modal.active {
+  -webkit-animation: animationLeft 1s forwards;
+          animation: animationLeft 1s forwards;
+  opacity: 1;
+  visibility: visible; }
+
+.modal.active {
+  -webkit-animation: animationLeft 1s forwards;
+          animation: animationLeft 1s forwards;
+  opacity: 1;
+  visibility: visible; }
+
 .overlay.active {
   opacity: 1;
   visibility: visible; }
@@ -1768,10 +1777,34 @@ body {
 .is-visible {
   height: -webkit-max-content !important;
   height: -moz-max-content !important;
-  height: max-content !important; }
+  height: max-content !important;
+  transform: translate3d(0px, 0, 0) !important;
+  -webkit-transition: height 1s ease !important;
+  -transition: height 1s ease !important; }
 
-.modal--is-visible {
-  transform: translate(0px, 0px) !important; }
+@-webkit-keyframes animationLeft {
+  0% {
+    transform: translateY(-150%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes animationLeft {
+  0% {
+    transform: translateY(-150%); }
+  100% {
+    transform: translateY(0); } }
+
+@-webkit-keyframes animationRight {
+  0% {
+    transform: translateX(150%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes animationRight {
+  0% {
+    transform: translateX(150%); }
+  100% {
+    transform: translateX(0); } }
 
 .repair__slide {
   width: 220px !important;
