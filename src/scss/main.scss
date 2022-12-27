@@ -335,15 +335,23 @@ body {
   width: 100%;
 }
 .form-list__item:last-child .call__form-placeholder {
-  height: 80px;
+  min-height: 80px;
+  resize: none;
+  overflow:auto;
 }
 
 .call__form-placeholder {
+ 
   width: 100%;
   height: 40px;
   padding: 8px;
   border: solid #eaeaea 1px;
   border-radius: 8px;
+}
+.call__form-placeholder::placeholder {
+  font-size: 16px;
+  padding: 0;
+  font-family: $TTLakes;
 }
 
 #modal-phone .menu__body {
