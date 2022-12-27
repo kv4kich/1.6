@@ -1,0 +1,16 @@
+a {
+  text-decoration: none !important;
+}
+* {
+  -webkit-tap-highlight-color: #ffffff00;
+  color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  background-color: $background-color_1;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}

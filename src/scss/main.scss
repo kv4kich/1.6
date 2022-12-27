@@ -1,39 +1,3 @@
-$color_1: white;
-$color_2: #7e7e82;
-$color_3: black;
-$color_4: rgba(126, 126, 130, 1);
-$color_5: rgba(27, 28, 33, 1);
-$TTLakes: 'TT Lakes';
-$background-color_1: transparent;
-$background-color_2: #f8f8f8;
-$background-color_3: #ffffff;
-$background-color_4: #ff3e79;
-$background-color_5: #fff;
-$background-color_6: rgba(221, 221, 221, 1);
-$background-color_7: rgba(181, 182, 188, 1);
-$border-color_1: #41f6d7;
-
-/*reset*/
-/*body*/
-/*header*/
-/* menu */
-/* services */
-a {
-  text-decoration: none !important;
-}
-* {
-  -webkit-tap-highlight-color: #ffffff00;
-  color: black;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-button {
-  background-color: $background-color_1;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s;
-}
 .page__wrapper {
   background-color: $background-color_2;
 }
@@ -369,6 +333,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+}
+.form-list__item:last-child .call__form-placeholder {
+  height: 80px;
 }
 
 .call__form-placeholder {
@@ -378,6 +346,7 @@ body {
   border: solid #eaeaea 1px;
   border-radius: 8px;
 }
+
 #modal-phone .menu__body {
   z-index: 1000;
 
@@ -401,10 +370,8 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  transform: translate(0, 0);
   z-index: 30;
   background-color: rgba($color: #ffffffa3, $alpha: 0.5);
-  transition: all 0.8s ease 0s;
 }
 
 .overlay {
@@ -422,11 +389,20 @@ body {
   transition: 0.3s all;
 }
 
-.modal.active,
+.modal.active {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse
+    forwards;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse
+    forwards;
+  opacity: 1;
+  visibility: visible;
+}
+
 .overlay.active {
   opacity: 1;
   visibility: visible;
 }
+
 .body-scrolllock {
   overflow: hidden;
 }
@@ -446,7 +422,6 @@ body {
   position: absolute;
   float: left;
   display: flex;
-  overflow-y: scroll;
   flex-direction: column;
   width: 320px;
   height: 100vh;
@@ -467,16 +442,16 @@ body {
 }
 .menu__content {
   display: flex;
-  flex-grow: 1;
 }
 .menu__list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 .menu__item {
   &:hover {
     .menu__link {
+      overflow-y: hidden;
       &::before {
         left: -4px;
       }
@@ -487,6 +462,7 @@ body {
     }
   }
 }
+
 .menu__footer {
   margin-top: auto;
 }
@@ -503,7 +479,6 @@ body {
   gap: 16px;
   display: flex;
   justify-content: flex-start;
-  padding-top: 40px;
   padding-bottom: 24px;
 }
 .footer__email {
@@ -826,7 +801,19 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
-
+  .close {
+    position: relative;
+    display: inline;
+    z-index: 100;
+    border-radius: 50%;
+    width: 40px !important;
+    height: 40px !important;
+    background: #ff3e79;
+    right: 75px;
+  }
+  .menu__list {
+    gap: 24px;
+  }
   #modal-menu {
     left: calc((100% - 1440px) / 2);
     position: fixed;
@@ -924,6 +911,7 @@ body {
   }
   #modal-menu .menu__body {
     transform: translate(0px, 0px);
+    overflow-x: scroll;
   }
 
   #modal-phone .menu__body {
@@ -944,8 +932,25 @@ body {
   height: max-content !important;
 }
 
-.modal--is-visible {
-  transform: translate(0px, 0px) !important;
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100vh);
+    transform: translateY(-100vh);
+  }
 }
 
 .repair__slide {
