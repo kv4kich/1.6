@@ -1311,7 +1311,9 @@ body {
   width: 100%; }
 
 .form-list__item:last-child .call__form-placeholder {
-  height: 80px; }
+  min-height: 80px;
+  resize: none;
+  overflow: auto; }
 
 .call__form-placeholder {
   width: 100%;
@@ -1319,6 +1321,26 @@ body {
   padding: 8px;
   border: solid #eaeaea 1px;
   border-radius: 8px; }
+
+.call__form-placeholder::-webkit-input-placeholder {
+  font-size: 16px;
+  padding: 0;
+  font-family: "TT Lakes"; }
+
+.call__form-placeholder::-moz-placeholder {
+  font-size: 16px;
+  padding: 0;
+  font-family: "TT Lakes"; }
+
+.call__form-placeholder:-ms-input-placeholder {
+  font-size: 16px;
+  padding: 0;
+  font-family: "TT Lakes"; }
+
+.call__form-placeholder::placeholder {
+  font-size: 16px;
+  padding: 0;
+  font-family: "TT Lakes"; }
 
 #modal-phone .menu__body {
   z-index: 100;
@@ -1357,8 +1379,8 @@ body {
   transition: 0.3s all; }
 
 .modal.active {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse forwards;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse forwards;
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.73, 0.02, 0.5, 1.02) reverse;
+  animation: slide-top 0.5s cubic-bezier(0.73, 0.02, 0.5, 1.02) reverse;
   opacity: 1;
   visibility: visible; }
 
