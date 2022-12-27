@@ -19,8 +19,8 @@
             <span class="button__img"><img src="img/svg/menu-cross.svg" alt="Закрыть"></span>
           </button>
           <h1 class="title-text">Заказать звонок</h1>
-          <form action="#" class="call__form">
-            <input type="tel" name="user-phone" placeholder="Телефон" class="call__form-placeholder autofocus">
+          <form action="#" class="call__form" id="call-form-id">
+            <input required pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" minlength="18" maxlength="18" type="tel" name="user-phone" placeholder="Телефон" class="call__form-placeholder autofocus">
           </form>
           <p class="footer__text">
             Нажимая “отправить”, вы даете согласие на
@@ -28,7 +28,7 @@
             и соглашаетесь с нашей
             <a class="footer__link"> политикой конфиденциальности</a>
           </p>
-          <button class="button__price"><span class="button__text btn">Отправить</span></button>
+          <button class="button__price" form="call-form-id"><span class="button__text btn">Отправить</span></button>
         </aside>
       </div>
       <div id="modal-feed" class="modal" data-modal="feed">
@@ -37,33 +37,29 @@
             <span class="button__img"><img src="img/svg/menu-cross.svg" alt="Закрыть"></span>
           </button>
           <h1 class="title-text">Обратная связь</h1>
-          <ul class="form-list">
-            <li><form action="#" class="call__form">
-                <input type="tel" name="user-name" placeholder="Имя" class="call__form-placeholder">
-              </form>
-            </li>
-            <li><form action="#" class="call__form">
-                <input type="tel" name="user-phone" placeholder="Телефон" class="call__form-placeholder">
-              </form>
-            </li>
-            <li>
-              <form action="#" class="call__form">
-                <input type="tel" name="user-email" placeholder="Электронная почта" class="call__form-placeholder">
-              </form>
-            </li>
-            <li>
-              <form action="#" class="call__form">
-                <input type="text" name="user-massage" placeholder="Сообщение" class="call__form-placeholder">
-              </form>
-            </li>
-          </ul>
+          <form action="#" class="call__form" id="feed-form-id">
+            <ul class="form-list">
+              <li class="form-list__item">
+                <input required type="text" name="user-name" placeholder="Имя" class="call__form-placeholder">
+              </li>
+              <li class="form-list__item">
+                <input required pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" minlength="18" maxlength="18" type="tel" name="user-phone" placeholder="Телефон" class="call__form-placeholder">
+              </li>
+              <li class="form-list__item">
+                <input required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" minlength="18" maxlength="18" type="email" name="user-email" placeholder="Электронная почта" class="call__form-placeholder">
+              </li>
+              <li class="form-list__item">
+                <input required maxlength="500" type="text" name="user-massage" placeholder="Сообщение" class="call__form-placeholder">
+              </li>
+            </ul>
+          </form>
           <p class="footer__text">
             Нажимая “отправить”, вы даете согласие на
             <a class="footer__link">обработку персональных данных</a>
             и соглашаетесь с нашей
             <a class="footer__link"> политикой конфиденциальности</a>
           </p>
-          <button class="button__price"><span class="button__text btn">Отправить</span></button>
+          <button class="button__price" form="feed-form-id"><span class="button__text btn">Отправить</span></button>
         </aside>
       </div>
       <div id="modal-menu" class="modal" data-modal="burger">
@@ -71,7 +67,7 @@
           <ul class="menu__header">
             <li class="menu__header-item"><button class="btn close js-modal-close"><span class="button__img"><img src="img/svg/menu-cross.svg" alt="Закрыть"></span></button>
             </li>
-            <li class="menu__header-item"><a href="#" class="logo"><img src="img/svg/logo.svg" alt="Лого" class=""></a>
+            <li class="menu__header-item"><a href="##" class="logo"><img src="img/svg/logo.svg" alt="Лого" class=""></a>
             </li>
             <li class="menu__header-item"><button class="btn"><span class="button__img"><img src="img/svg/search.svg" alt="Поиск"></span></button>
             </li>
@@ -80,14 +76,14 @@
           <section class="menu__content">
             <nav class="menu__navigation">
               <ul class="menu__list">
-                <li class="menu__item"><a href="#" class="menu__link" aria-label="Ремонт техники"><span class="menu__text">Ремонт техники</span></a></li>
-                <li class="menu__item"><a href="#" class="menu__link" aria-label="Услуги и сервисы"><span class="menu__text">Услуги и сервисы</span></a></li>
-                <li class="menu__item"><a href="#" class="menu__link" aria-label="Корпоративным клиентам"><span class="menu__text">Корпоративным клиентам</span></a></li>
-                <li class="menu__item"><a href="#" class="menu__link" aria-label="Продавцам техники"><span class="menu__text">Продавцам техники</span></a></li>
-                <li class="menu__item"><a href="#" class="menu__link" aria-label="Партнерам"><span class="menu__text">Партнерам</span></a></li>
-                <li class="menu__item"><a href="#" class="menu__link" aria-label="Производителям"><span class="menu__text">Производителям</span></a></li>
-                <li class="menu__item"><a href="#" class="menu__link" aria-label="Наши сервисные центры"><span class="menu__text">Наши сервисные центры</span></a></li>
-                <li class="menu__item"><a href="#" class="menu__link" aria-label="Контакты"><span class="menu__text">Контакты</span></a></li>
+                <li class="menu__item"><a href="##" class="menu__link" aria-label="Ремонт техники"><span class="menu__text">Ремонт техники</span></a></li>
+                <li class="menu__item"><a href="##" class="menu__link" aria-label="Услуги и сервисы"><span class="menu__text">Услуги и сервисы</span></a></li>
+                <li class="menu__item"><a href="##" class="menu__link" aria-label="Корпоративным клиентам"><span class="menu__text">Корпоративным клиентам</span></a></li>
+                <li class="menu__item"><a href="##" class="menu__link" aria-label="Продавцам техники"><span class="menu__text">Продавцам техники</span></a></li>
+                <li class="menu__item"><a href="##" class="menu__link" aria-label="Партнерам"><span class="menu__text">Партнерам</span></a></li>
+                <li class="menu__item"><a href="##" class="menu__link" aria-label="Производителям"><span class="menu__text">Производителям</span></a></li>
+                <li class="menu__item"><a href="##" class="menu__link" aria-label="Наши сервисные центры"><span class="menu__text">Наши сервисные центры</span></a></li>
+                <li class="menu__item"><a href="##" class="menu__link" aria-label="Контакты"><span class="menu__text">Контакты</span></a></li>
               </ul>
             </nav>
           </section>
@@ -131,17 +127,17 @@
         <nav class="nav-scroller">
           <ul class="nav-scroller__list">
             <li>
-              <a class="nav-scroller__item" href="#">Ремонтируемые бренды</a>
+              <a class="nav-scroller__item" href="##">Ремонтируемые бренды</a>
             </li>
             <li>
-              <a class="nav-scroller__item" href="#">Ремонтируемые устройства</a>
+              <a class="nav-scroller__item" href="##">Ремонтируемые устройства</a>
             </li>
-            <li><a class="nav-scroller__item" href="#">Цены на услуги</a></li>
+            <li><a class="nav-scroller__item" href="##">Цены на услуги</a></li>
             <li>
-              <a class="nav-scroller__item" href="#">Адреса сервисных центров</a>
+              <a class="nav-scroller__item" href="##">Адреса сервисных центров</a>
             </li>
-            <li><a class="nav-scroller__item" href="#">Специальные цены</a></li>
-            <li><a class="nav-scroller__item" href="#">Отзывы</a></li>
+            <li><a class="nav-scroller__item" href="##">Специальные цены</a></li>
+            <li><a class="nav-scroller__item" href="##">Отзывы</a></li>
           </ul>
         </nav>
         <main class="main">
@@ -177,7 +173,7 @@
             <ul class="swiper-wrapper section__slider brands__slider">
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/acer.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -185,7 +181,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/apple.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -193,7 +189,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/bosch.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -201,7 +197,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/hp.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -209,7 +205,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/lenovo.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -217,7 +213,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/samsung.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -225,7 +221,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/sony.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -233,7 +229,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/viewsonic.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -241,7 +237,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/acer.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -249,7 +245,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/apple.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -257,7 +253,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide">
+                  <a href="##" class="slide">
                     <img src="img/logos/bosch.png" alt="">
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -278,7 +274,7 @@
             <ul class="swiper-wrapper section__slider repair__slider">
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide repair__slide">
+                  <a href="##" class="slide repair__slide">
                     <p>Ремонт ноутбук</p>
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -286,7 +282,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide repair__slide">
+                  <a href="##" class="slide repair__slide">
                     <p>Ремонт ноутбук</p>
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -294,7 +290,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide repair__slide">
+                  <a href="##" class="slide repair__slide">
                     <p>Ремонт планшетов</p>
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -302,7 +298,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide repair__slide">
+                  <a href="##" class="slide repair__slide">
                     <p>Ремонт ПК</p>
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -310,7 +306,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide repair__slide">
+                  <a href="##" class="slide repair__slide">
                     <p>Ремонт мониторов</p>
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -318,7 +314,7 @@
               </li>
               <li class="swiper-slide">
                 <article>
-                  <a href="#" class="slide repair__slide">
+                  <a href="##" class="slide repair__slide">
                     <p>Ремонт телефонов</p>
                     <img src="img/svg/go.svg" alt="">
                   </a>
@@ -398,7 +394,7 @@
         обслуживание, оставьте заявку.
       </div>
       <div class="section__proposition section">
-        <a href="#">
+        <a href="##">
           <span class="section section__proposition-text">Получить предложение</span>
         </a>
       </div>
@@ -406,7 +402,7 @@
       <footer class="page__footer section">
         <p class="footer__text">© 2019 CPS <br>Разработано командой Apesong</p>
 
-        <a href="#"><p class="footer__text">Политика конфиденциальности</p></a>
+        <a href="##"><p class="footer__text">Политика конфиденциальности</p></a>
         <p class="footer__text">Информация, размещенная на данной странице, не является публичной
           офертой</p>
       </footer>
