@@ -1,4 +1,3 @@
-@import url(/src/fonts/TTLakes/fonts.css);
 /**
  * Swiper 8.4.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -645,6 +644,37 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   overflow: hidden;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(./fonts/TTLakes-Bold.eot);
+  src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+    url(./fonts/TTLakes-Bold.eot?#iefix) format('embedded-opentype'),
+    url(./fonts/TTLakes-Bold.woff) format('woff'),
+    url(./fonts/TTLakes-Bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(./fonts/TTLakes-ExtraLight.eot);
+  src: local('TT Lakes ExtraLight'), local('TTLakes-ExtraLight'),
+    url(./fonts/TTLakes-ExtraLight.eot?#iefix) format('embedded-opentype'),
+    url(./fonts/TTLakes-ExtraLight.woff) format('woff'),
+    url(./fonts/TTLakes-ExtraLight.ttf) format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(./fonts/TTLakes-Regular.eot);
+  src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+    url(./fonts/TTLakes-Regular.eot?#iefix) format('embedded-opentype'),
+    url(./fonts/TTLakes-Regular.woff) format('woff'),
+    url(./fonts/TTLakes-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @charset "UTF-8";
