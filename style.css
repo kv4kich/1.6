@@ -1322,7 +1322,7 @@ body {
   border-radius: 8px; }
 
 #modal-phone .menu__body {
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   right: 0;
   left: auto;
