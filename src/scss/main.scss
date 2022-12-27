@@ -169,8 +169,7 @@ body {
   border-radius: 50%;
 }
 .button__price {
-  bottom: 36px;
-  position: absolute;
+  bottom: 16px;
   align-self: flex-end;
   border-radius: 16px;
   background: #ff3e79 url(../img/svg/dropdown.svg) no-repeat 90% 50%;
@@ -418,7 +417,7 @@ body {
 }
 
 .menu__body {
-  box-shadow: 0px 0 15px 10px #ff3e791f;
+  box-shadow: 0px 0 10px 5px #ff3e790d;
   position: absolute;
   float: left;
   display: flex;
@@ -431,7 +430,7 @@ body {
 }
 .menu__header {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: center;
   padding-bottom: 16px;
 }

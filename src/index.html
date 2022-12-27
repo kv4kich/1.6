@@ -24,9 +24,9 @@
           <form action="#" class="call__form" id="call-form-id">
             <input
               required
-              pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
-              minlength="18"
-              maxlength="18"
+              pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
+              minlength="11"
+              maxlength="16"
               type="tel"
               name="user-phone"
               placeholder="Телефон"
@@ -60,7 +60,7 @@
                   type="text"
                   name="user-name"
                   placeholder="Имя"
-                  class="call__form-placeholder"
+                  class="call__form-placeholder autofocus"
                 />
               </li>
               <li class="form-list__item">
@@ -464,7 +464,7 @@
               <li class="swiper-slide">
                 <article>
                   <a href="##" class="slide repair__slide">
-                    <p>Ремонт ноутбук</p>
+                    <p>Ремонт ноутбуков</p>
                     <img src="img/svg/go.svg" alt="" />
                   </a>
                 </article>
@@ -472,7 +472,7 @@
               <li class="swiper-slide">
                 <article>
                   <a href="##" class="slide repair__slide">
-                    <p>Ремонт ноутбук</p>
+                    <p>Ремонт смарт-часов</p>
                     <img src="img/svg/go.svg" alt="" />
                   </a>
                 </article>
@@ -519,7 +519,7 @@
       </section>
       <section class="price__body section">
         <div class="services__header">
-          <h2 class="services__title">Ремонт различных видов</h2>
+          <h2 class="services__title">Цены на услуги</h2>
         </div>
         <span class="price__article">
           <p class="price__article--first">Ремонтные услуги</p>
