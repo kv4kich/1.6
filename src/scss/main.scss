@@ -3,7 +3,7 @@ $color_2: #7e7e82;
 $color_3: black;
 $color_4: rgba(126, 126, 130, 1);
 $color_5: rgba(27, 28, 33, 1);
-$font-family_2: 'TT Lakes';
+$TTLakes: 'TT Lakes';
 $background-color_1: transparent;
 $background-color_2: #f8f8f8;
 $background-color_3: #ffffff;
@@ -89,11 +89,11 @@ label {
 body {
   max-width: 1440px;
   margin: 0 auto;
-  font-family: 'TT Lakes Regular', serif;
+
   font-size: 16px;
   padding: 0;
   background-color: $background-color_2;
-  font-family: $font-family_2;
+  font-family: $TTLakes;
 }
 .header {
   display: flex;
@@ -136,7 +136,7 @@ body {
 }
 .header__text {
   font-size: 16px;
-  font-family: $font-family_2;
+  font-family: $TTLakes;
   display: none;
 }
 .logo {
@@ -253,7 +253,7 @@ body {
   padding-left: 16px;
   box-sizing: border-box;
   display: flex;
-  font-family: $font-family_2;
+  font-family: $TTLakes;
   font-size: 28px;
   line-height: 40px;
   letter-spacing: -0.6px;
@@ -328,7 +328,7 @@ body {
 }
 .content__text {
   padding: 16px;
-  font-family: $font-family_2;
+  font-family: $TTLakes;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.2px;
@@ -346,7 +346,7 @@ body {
 .content__button {
   display: flex;
   background-color: $background-color_2;
-  font-family: $font-family_2;
+  font-family: $TTLakes;
   color: $color_3;
   font-size: 16px;
   line-height: 24px;
@@ -452,7 +452,7 @@ body {
   height: 100vh;
   padding: 16px;
   background-color: $background-color_2;
-  font-family: $font-family_2;
+  font-family: $TTLakes;
 }
 .menu__header {
   display: flex;
@@ -551,7 +551,7 @@ body {
 }
 .services__title {
   display: flex;
-  font-family: $font-family_2;
+  font-family: $TTLakes;
   font-weight: 200;
   font-size: 16px;
   line-height: 24px;
