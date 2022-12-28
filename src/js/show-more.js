@@ -17,7 +17,7 @@ buttonBrands.addEventListener('click', () => {
   }
   buttonBrands.classList.toggle('show-more--passive')
   buttonBrands.classList.toggle('show-more--active')
-  sliderDropdown.classList.toggle('is-visible')
+  sliderDropdown.classList.toggle('--is-visible')
 })
 
 buttonText.addEventListener('click', () => {
@@ -28,7 +28,7 @@ buttonText.addEventListener('click', () => {
   }
   buttonText.classList.toggle('show-more--passive')
   buttonText.classList.toggle('show-more--active')
-  textDropdown.classList.toggle('is-visible')
+  textDropdown.classList.toggle('--is-visible')
 })
 
 buttonRepair.addEventListener('click', () => {
@@ -39,5 +39,5 @@ buttonRepair.addEventListener('click', () => {
   }
   buttonRepair.classList.toggle('show-more--passive')
   buttonRepair.classList.toggle('show-more--active')
-  repairDropdown.classList.toggle('is-visible')
+  repairDropdown.classList.toggle('--is-visible')
 })
