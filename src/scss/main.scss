@@ -459,7 +459,7 @@ body {
 .menu__list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 .menu__item {
   &:hover {
@@ -477,7 +477,7 @@ body {
 }
 
 .menu__footer {
-  margin-top: auto;
+  margin-top: 12px;
 }
 .footer__contacts {
   display: flex;
@@ -814,6 +814,9 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
+  .menu__footer {
+    margin-top: auto;
+  }
   .close {
     position: relative;
     display: inline;
