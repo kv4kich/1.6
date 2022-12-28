@@ -1349,7 +1349,6 @@ body {
   font-family: "TT Lakes"; }
 
 #modal-phone .menu__body {
-  z-index: 100;
   display: flex;
   right: 0;
   left: auto;
@@ -1398,9 +1397,11 @@ body {
   overflow: hidden; }
 
 #modal-phone {
-  z-index: 31; }
+  z-index: 31;
+  position: fixed; }
 
 #modal-feed {
+  position: fixed;
   z-index: 31; }
 
 #modal-menu {
