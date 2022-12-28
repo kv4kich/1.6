@@ -1394,7 +1394,7 @@ body {
   opacity: 1;
   visibility: visible; }
 
-.body-scrolllock {
+.scrolllock-active {
   overflow: hidden; }
 
 #modal-phone {
