@@ -1635,6 +1635,8 @@ body {
   right: -8px; }
 
 @media screen and (min-width: 768px) {
+  .menu__footer {
+    margin-top: auto; }
   .price-text {
     margin: 0; }
   .price-slide .price-text:nth-child(1)::before {
@@ -1719,8 +1721,8 @@ body {
     background-color: #ffffff; } }
 
 @media screen and (min-width: 1440px) {
-  .menu__footer {
-    margin-top: auto; }
+  .menu__body {
+    max-height: 1755px; }
   .close {
     position: relative;
     display: inline;
