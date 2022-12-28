@@ -364,7 +364,7 @@ body {
 }
 
 #modal-phone .menu__body {
-  z-index: 100;
+
 
   display: flex;
   right: 0;
@@ -425,8 +425,12 @@ body {
 
 #modal-phone {
   z-index: 31;
+  position: fixed;
+
+  
 }
 #modal-feed {
+  position: fixed;
   z-index: 31;
 }
 #modal-menu {
