@@ -183,6 +183,13 @@ body {
   transition: 0.5s ease-in;
   align-items: center;
 }
+.button__price:hover {
+  background-color: #ff86aa;
+}
+.button__price:active {
+  opacity: 0.8;
+}
+
 .button__text {
   font-weight: bold;
   font-size: 11px;
@@ -392,7 +399,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(174, 174, 174, 0.6);
+  background-color: rgba(172, 172, 172, 0.6);
   z-index: 20;
   transition: 0.3s all;
 }
