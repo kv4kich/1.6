@@ -8,6 +8,9 @@ a {
   padding: 0;
   box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+  display: none;
+}
 button {
   background-color: $background-color_1;
   border: none;
