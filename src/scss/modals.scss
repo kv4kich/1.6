@@ -1,0 +1,275 @@
+.menu__link {
+  &:hover {
+    img {
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    border-left: 8px solid #41f6d7;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 32px;
+    left: -8px;
+    transform: translateY(-8px);
+    transition: 0.2s;
+  }
+  .menu__text {
+    color: $color_5;
+  }
+}
+
+.main-menu {
+  max-height: 0px;
+  font-size: 0px;
+  list-style: none;
+}
+
+
+
+
+.menu {
+  height: auto;
+}
+.call__form {
+  display: flex;
+}
+.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.form-list__item:last-child .call__form-placeholder {
+  min-height: 80px;
+  resize: none;
+  overflow:auto;
+}
+
+.call__form-placeholder {
+ 
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  border: solid #eaeaea 1px;
+  border-radius: 8px;
+}
+.call__form-placeholder::placeholder {
+  font-size: 16px;
+  padding: 0;
+  font-family: $TTLakes;
+}
+
+#modal-phone .menu__body {
+
+
+  display: flex;
+  right: 0;
+  left: auto;
+  gap: 16px;
+}
+
+#modal-feed .menu__body {
+  display: flex;
+  right: 0;
+  left: auto;
+  gap: 16px;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  background-color: rgba($color: #ffffffa3, $alpha: 0.5);
+}
+
+
+.overlay {
+  /* Скрываем подложку  */
+
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(172, 172, 172, 0.6);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+.modal.active {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.73, 0.02, 0.5, 1.02) reverse;
+  animation: slide-top 0.5s cubic-bezier(0.73, 0.02, 0.5, 1.02) reverse;
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scrolllock-active {
+  overflow: hidden;
+}
+
+#modal-phone {
+  z-index: 31;
+  position: fixed;
+
+  
+}
+#modal-feed {
+  position: fixed;
+  z-index: 31;
+}
+#modal-menu {
+  z-index: 30;
+  left: 0 ;
+}
+
+.menu__body {
+  box-shadow: 0px 0 10px 5px #ff3e790d;
+  position: fixed;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 100vh;
+  padding: 16px;
+  background-color: $background-color_2;
+  font-family: $TTLakes;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+.menu__body::-webkit-scrollbar {
+  display: none;
+}
+
+.menu__header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.menu__header-item {
+  &:nth-child(2) {
+    flex-grow: 1;
+  }
+}
+.menu__content {
+  display: flex;
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu__item {
+  &:hover {
+    .menu__link {
+      overflow-y: hidden;
+      &::before {
+        left: -4px;
+      }
+      .menu__text {
+        color: $color_4;
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+.menu__footer {
+  margin-top: 12px;
+}
+
+.lang-text {
+  color: $color_4;
+}
+.lang-radio {
+  input {
+    appearance: none;
+    &:checked {
+      + {
+        .lang-text {
+          color: $color_3;
+          transition: 0.2s;
+          transform: scale(1.5, 1.5);
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .menu__footer {
+    margin-top: auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu__body {
+    max-height: 1755px;
+  }
+
+  .close {
+    position: relative;
+    display: inline;
+    z-index: 100;
+    border-radius: 50%;
+
+    background: #ff3e79;
+    right: 75px;
+  }
+  .menu__list {
+    gap: 24px;
+  }
+  #modal-menu {
+    left: calc((100% - 1440px) / 2);
+    position: fixed;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+
+  }
+  #modal-phone {
+    right: calc((100% - 1440px) / 2);
+  }
+  #modal-feed {
+    right: calc((100% - 1440px) / 2);
+  }
+
+
+
+
+  //стилизация 1120/1440
+
+ 
+  #modal-menu .menu__body {
+    transform: translate(0px, 0px);
+    overflow-x: hidden;
+  }
+
+  #modal-phone .menu__body {
+    transform: translate(0px, 0px);
+    overflow-x: hidden;
+  }
+
+
+
+  .menu__header-item:nth-child(1) {
+    display: none;
+  }
+  
+}

@@ -1,0 +1,11 @@
+
+.section--attention,
+.section--proposition {
+  padding: 16px;
+  color: #1b1c21;
+}
+.section--proposition-text::after {
+  content: url(../img/svg/more.svg);
+  position: absolute;
+  right: -8px;
+}

@@ -1,0 +1,27 @@
+
+.repair__slide {
+  width: 220px !important;
+  height: 160px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 85%;
+}
+
+.repair__slide p {
+  align-self: flex-start;
+}
+
+.repair__slide img {
+  align-self: flex-end;
+}
+
+.repair__slider {
+  max-height: 170px;
+}
+.repair__pagination {
+  position: relative;
+  top: 0px;
+}

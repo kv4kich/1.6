@@ -1,3 +1,8 @@
+.page-wrapper {
+  background-color: $background-color_2;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 a {
   text-decoration: none !important;
 }
@@ -16,4 +21,23 @@ button {
   border: none;
   cursor: pointer;
   transition: 0.2s;
+}
+ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+body {
+  
+
+  font-size: 16px;
+  padding: 0;
+  background-color: $background-color_2;
+  font-family: $TTLakes;
 }

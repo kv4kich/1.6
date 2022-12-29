@@ -1,0 +1,71 @@
+.page__footer {
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: #41f6d7;
+}
+.footer__link {
+  color: #ff3e79;
+}
+
+.footer__text {
+  
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #7e7e82;
+  opacity: 0.72;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 16px;
+}
+.footer__lang {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 16px;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 24px;
+}
+.footer__email {
+  margin-top: 16px;
+}
+.footer__phone {
+  margin-top: 16px;
+  .menu__link {
+    .mene__text {
+      color: $color_3;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page__footer {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1440px) {
+
+  .page__footer.section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section .footer__text:nth-child(1){
+    text-align: left;
+  }
+
+  .section .footer__text {
+    text-align: right;
+  }
+}
