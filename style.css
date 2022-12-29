@@ -1410,7 +1410,7 @@ body {
 
 .menu__body {
   box-shadow: 0px 0 10px 5px #ff3e790d;
-  position: absolute;
+  position: fixed;
   float: left;
   display: flex;
   flex-direction: column;
@@ -1578,7 +1578,7 @@ body {
   margin-top: 20px;
   position: relative;
   font-family: 'TT Lakes';
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
   color: #1b1c21; }
@@ -1654,18 +1654,12 @@ body {
     display: none; }
   .price__article {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
     margin-left: 33px;
     margin-right: 33px; }
   .price__article p {
     color: #7e7e82;
     display: flex; }
-  .price__article--first {
-    flex-grow: 4; }
-  .price__article--second {
-    flex-grow: 0.3; }
-  .price__article--third {
-    flex-grow: 3.1; }
   .header__item:nth-child(3) {
     display: inherit; }
   .header__item:nth-child(4) {
@@ -1707,7 +1701,7 @@ body {
   .brands__slider {
     max-height: 80px; }
   .price-slide {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
     display: grid;
     width: 100%;
     height: 80px;
@@ -1730,7 +1724,7 @@ body {
 
 @media screen and (min-width: 1440px) {
   .price-text {
-    font-size: 16px; }
+    font-size: 18px; }
   .page__footer.section {
     display: grid;
     grid-template-columns: repeat(3, 1fr); }
